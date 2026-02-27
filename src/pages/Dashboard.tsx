@@ -90,34 +90,34 @@ const AnimatedNumber = ({ value, duration = 1200 }: { value: number; duration?: 
 
 // ─── Stat Card ──────────────────────────────────────────────
 const StatCard = ({
-  title, value, icon: Icon, subtitle, glowClass, iconBg, delay,
+  title, value, icon: Icon, subtitle, iconBg, delay,
 }: {
   title: string; value: number; icon: React.ElementType;
-  subtitle?: string; glowClass: string; iconBg: string; delay: number;
+  subtitle?: string; iconBg: string; delay: number;
 }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5, delay }}
   >
-    <Card className={`border-0 shadow-md hover:shadow-xl transition-all duration-300 ${glowClass} group cursor-default`}>
-      <CardContent className="p-5">
-        <div className="flex items-start justify-between">
-          <div>
-            <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider">{title}</p>
-            <p className="text-4xl font-bold text-foreground mt-2 tabular-nums">
-              [<AnimatedNumber value={value} />]
-            </p>
-            {subtitle && (
-              <p className="text-xs text-muted-foreground mt-1.5 flex items-center gap-1">
-                <TrendingUp className="h-3 w-3 text-success" />
-                {subtitle}
-              </p>
-            )}
-          </div>
-          <div className={`p-3 rounded-xl ${iconBg} transition-transform duration-300 group-hover:scale-110`}>
+    <Card className="border-0 shadow-md hover:shadow-xl transition-all duration-300 group cursor-default h-full">
+      <CardContent className="p-5 flex flex-col justify-between h-full">
+        <div className="flex items-start justify-between mb-3">
+          <p className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider leading-tight max-w-[100px]">{title}</p>
+          <div className={`p-2.5 rounded-xl ${iconBg} transition-transform duration-300 group-hover:scale-110 shrink-0`}>
             <Icon className="h-5 w-5 text-white" />
           </div>
+        </div>
+        <div>
+          <p className="text-3xl font-bold text-foreground tabular-nums">
+            [<AnimatedNumber value={value} />]
+          </p>
+          {subtitle && (
+            <p className="text-[11px] text-muted-foreground mt-1 flex items-center gap-1">
+              <TrendingUp className="h-3 w-3 text-success" />
+              {subtitle}
+            </p>
+          )}
         </div>
       </CardContent>
     </Card>
@@ -186,7 +186,6 @@ const Dashboard = () => {
             subtitle={serviceName}
             icon={Users}
             iconBg="bg-primary"
-            glowClass="stat-glow-blue"
             delay={0}
           />
           <StatCard
@@ -194,7 +193,6 @@ const Dashboard = () => {
             value={12}
             icon={CalendarDays}
             iconBg="bg-secondary"
-            glowClass="stat-glow-gold"
             delay={0.1}
           />
           <StatCard
@@ -203,7 +201,6 @@ const Dashboard = () => {
             subtitle="2 internationales"
             icon={Plane}
             iconBg="bg-info"
-            glowClass="stat-glow-blue"
             delay={0.2}
           />
           <StatCard
@@ -212,7 +209,6 @@ const Dashboard = () => {
             subtitle="En cours"
             icon={UserPlus}
             iconBg="bg-success"
-            glowClass="stat-glow-green"
             delay={0.3}
           />
         </div>
