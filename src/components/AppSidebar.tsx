@@ -49,7 +49,7 @@ export function AppSidebar() {
   };
 
   return (
-    <Sidebar collapsible="icon">
+    <Sidebar collapsible="icon" className="backdrop-blur-xl bg-sidebar/95 border-r border-white/[0.06]">
       <SidebarHeader className="p-5 pb-6">
         <div className="flex items-center gap-3">
           <img src="/logos/Logo_RH_2.png" alt="GRH" className="h-9 w-9 object-contain shrink-0" />
