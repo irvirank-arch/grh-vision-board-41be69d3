@@ -52,7 +52,7 @@ export function AppSidebar() {
     <Sidebar collapsible="icon">
       <SidebarHeader className="p-5 pb-6">
         <div className="flex items-center gap-3">
-          <img src="/logos/Logo_RH_3.png" alt="GRH" className="h-9 w-9 object-contain shrink-0" />
+          <img src="/logos/Logo_RH_2.png" alt="GRH" className="h-9 w-9 object-contain shrink-0" />
           {!collapsed && (
             <div className="min-w-0">
               <span className="font-bold text-sm text-sidebar-foreground block tracking-wide">
