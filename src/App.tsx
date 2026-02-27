@@ -10,6 +10,8 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import RecruitmentList from "./pages/recruitment/RecruitmentList";
 import RecruitmentWizard from "./pages/recruitment/RecruitmentWizard";
+import AgentsList from "./pages/agents/AgentsList";
+import AgentDetail from "./pages/agents/AgentDetail";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -40,7 +42,17 @@ const App = () => (
               element={
                 <ProtectedRoute>
                   <AppLayout>
-                    <div className="text-center py-20 text-muted-foreground">Module Agents — à venir</div>
+                    <AgentsList />
+                  </AppLayout>
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/agents/:id"
+              element={
+                <ProtectedRoute>
+                  <AppLayout>
+                    <AgentDetail />
                   </AppLayout>
                 </ProtectedRoute>
               }
