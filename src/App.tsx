@@ -14,6 +14,7 @@ import AgentsList from "./pages/agents/AgentsList";
 import AgentDetail from "./pages/agents/AgentDetail";
 import LeaveList from "./pages/leave/LeaveList";
 import MissionsList from "./pages/missions/MissionsList";
+import AttestationsList from "./pages/attestations/AttestationsList";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -104,7 +105,7 @@ const App = () => (
               element={
                 <ProtectedRoute>
                   <AppLayout>
-                    <div className="text-center py-20 text-muted-foreground">Module Attestations — à venir</div>
+                    <AttestationsList />
                   </AppLayout>
                 </ProtectedRoute>
               }
