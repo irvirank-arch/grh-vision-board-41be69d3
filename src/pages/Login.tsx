@@ -56,7 +56,7 @@ const Login = () => {
               <img src="/logos/Icon_PR_1.png" alt="Présidence RDC" className="relative h-24 w-24 object-contain" />
             </div>
             <div className="h-16 w-px bg-gradient-to-b from-transparent via-white/20 to-transparent" />
-            <img src="/logos/Logo_RH_3.png" alt="GRH Logo" className="h-16 object-contain" style={{ mixBlendMode: 'lighten' }} />
+            <img src="/logos/Logo_RH_2.png" alt="GRH Logo" className="h-16 object-contain" />
           </div>
           <div className="flex items-center justify-center gap-2 mb-5">
             <div className="h-px w-10 bg-secondary" />
@@ -98,7 +98,7 @@ const Login = () => {
         >
           <div className="lg:hidden flex items-center justify-center gap-4 mb-8">
             <img src="/logos/Icon_PR_1.png" alt="Présidence RDC" className="h-16 w-16 object-contain" />
-            <img src="/logos/Logo_RH_1.png" alt="GRH Logo" className="h-12 object-contain" />
+            <img src="/logos/Logo_RH_2.png" alt="GRH Logo" className="h-12 object-contain" />
           </div>
 
           <div className="mb-8">
