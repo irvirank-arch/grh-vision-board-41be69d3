@@ -13,6 +13,7 @@ import RecruitmentWizard from "./pages/recruitment/RecruitmentWizard";
 import AgentsList from "./pages/agents/AgentsList";
 import AgentDetail from "./pages/agents/AgentDetail";
 import LeaveList from "./pages/leave/LeaveList";
+import MissionsList from "./pages/missions/MissionsList";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -93,7 +94,7 @@ const App = () => (
               element={
                 <ProtectedRoute>
                   <AppLayout>
-                    <div className="text-center py-20 text-muted-foreground">Module Missions — à venir</div>
+                    <MissionsList />
                   </AppLayout>
                 </ProtectedRoute>
               }
