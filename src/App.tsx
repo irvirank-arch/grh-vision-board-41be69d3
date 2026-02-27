@@ -8,6 +8,8 @@ import ProtectedRoute from "@/components/ProtectedRoute";
 import AppLayout from "@/components/AppLayout";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
+import RecruitmentList from "./pages/recruitment/RecruitmentList";
+import RecruitmentWizard from "./pages/recruitment/RecruitmentWizard";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -48,7 +50,17 @@ const App = () => (
               element={
                 <ProtectedRoute>
                   <AppLayout>
-                    <div className="text-center py-20 text-muted-foreground">Module Recrutement — à venir</div>
+                    <RecruitmentList />
+                  </AppLayout>
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/recruitment/new"
+              element={
+                <ProtectedRoute>
+                  <AppLayout>
+                    <RecruitmentWizard />
                   </AppLayout>
                 </ProtectedRoute>
               }
