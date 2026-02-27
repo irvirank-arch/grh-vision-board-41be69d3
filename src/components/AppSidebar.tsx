@@ -52,14 +52,11 @@ export function AppSidebar() {
     <Sidebar collapsible="icon">
       <SidebarHeader className="p-5 pb-6">
         <div className="flex items-center gap-3">
-          <div className="relative shrink-0">
-            <div className="absolute -inset-1 rounded-xl bg-sidebar-primary/20 blur-md" />
-            <img src="/logos/Logo_RH_3.png" alt="GRH" className="relative h-9 w-9 object-contain brightness-0 invert" />
-          </div>
+          <img src="/logos/Logo_RH_3.png" alt="GRH" className="h-9 w-9 object-contain shrink-0" />
           {!collapsed && (
             <div className="min-w-0">
               <span className="font-bold text-sm text-sidebar-foreground block tracking-wide">
-                RH PR
+                GRH
               </span>
               <span className="text-[10px] text-sidebar-foreground/40 block">
                 Présidence RDC
